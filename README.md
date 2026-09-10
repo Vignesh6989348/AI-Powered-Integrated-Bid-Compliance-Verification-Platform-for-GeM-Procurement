@@ -1,8 +1,8 @@
-# GeM Compliance Intelligence — AI-Powered Bid Compliance Verification Platform
+# GeM Compliance Intelligence — AI-Powered Bid Compliance Verification Platform-Neurix(Vignesh)
 
 **SIH 2026 · Problem ID SIH26100** · Ministry of Petroleum & Natural Gas · Chennai Petroleum Corporation Limited (CPCL) · Theme: Smart Automation
 
-> This system takes a government tender + bidder documents, automatically checks every requirement, detects missing / expired / inconsistent evidence, performs simulated cross-verification, calculates compliance and risk, and gives procurement officers an explainable decision with an audit trail.
+>This prototype demonstrates an AI-assisted workflow that analyzes tender and bidder evidence, maps requirements to supporting documents, evaluates compliance, identifies inconsistencies, performs simulated cross-verification, assesses risk, and provides explainable decision support with human review and audit trails
 
 ## Run locally (2 commands)
 
@@ -12,6 +12,175 @@ npm run dev
 ```
 
 Open the printed local URL (usually http://localhost:5173). Click **Enter Demo**. No credentials, no API keys, no backend needed.
+
+# GeM Compliance Intelligence
+
+### AI-Powered Integrated Bid Compliance Verification Platform for GeM Procurement
+
+**SIH 2026 · Problem ID: SIH26100**  
+**Organization:** Ministry of Petroleum & Natural Gas  
+**Department:** Chennai Petroleum Corporation Limited (CPCL)  
+**Theme:** Smart Automation  
+**Category:** Software  
+
+**Developed by NEURIX — Vignesh**
+
+---
+
+## Overview
+
+GeM Compliance Intelligence is an AI-assisted procurement compliance platform designed to simplify the evaluation of government tender bids.
+
+The prototype analyzes tender requirements and bidder-submitted documents, maps evidence to requirements, evaluates compliance, identifies missing or inconsistent information, assesses risk, and provides explainable decision support for procurement officers.
+
+The platform follows an evidence-driven workflow:
+
+**Requirement → Evidence → Verification → Compliance → Risk → Human Review → Decision → Audit**
+
+The goal is to transform a document-intensive procurement process into a structured, transparent, and auditable workflow.
+
+---
+
+## Key Features
+
+- Tender and bidder document management
+- AI-assisted requirement extraction
+- Evidence mapping and traceability
+- Requirement-level compliance analysis
+- Compliance Matrix
+- Evidence Chain
+- Contradiction and inconsistency detection
+- Verification workflow
+- Risk assessment and prioritization
+- Remediation recommendations
+- Human-in-the-loop review
+- Explainable final decisions
+- Complete audit trail
+- PDF audit report generation
+- Separate Demo and Manual operating modes
+- NEURIX-branded procurement workspace
+
+---
+
+## Compliance Intelligence
+
+Each requirement is evaluated through an evidence-driven process.
+
+### Requirement
+Identifies what the tender requires.
+
+### Evidence
+Links the requirement to supporting bidder documentation.
+
+### Verification
+Determines whether the available evidence satisfies the requirement.
+
+### Decision
+Produces a compliance result with supporting reasoning.
+
+This approach improves transparency by allowing procurement officers to trace a decision back to its underlying evidence.
+
+---
+
+## Compliance vs Verification Confidence
+
+The platform separates two important concepts:
+
+**Compliance Score**  
+Measures whether the tender requirements are satisfied.
+
+**Verification Confidence**  
+Measures how reliable and sufficiently supported the available evidence is.
+
+This distinction prevents high-confidence evidence from being incorrectly interpreted as compliant evidence.
+
+---
+
+## Risk & Human Review
+
+The platform categorizes potential procurement risks such as:
+
+- Financial compliance
+- Documentation gaps
+- Certification issues
+- Identity inconsistencies
+- Technical requirements
+- Missing or expired evidence
+
+Ambiguous cases are not automatically classified as fraudulent.
+
+Instead, they are routed to **Human Review**, allowing an authorized officer to evaluate the evidence and record a decision.
+
+All significant actions are captured in the audit trail.
+
+---
+
+## Demo & Manual Models
+
+### Demo Model
+
+Provides a deterministic CPCL procurement scenario demonstrating the complete compliance-analysis workflow.
+
+### Manual Model
+
+Provides a separate workspace where users can create a tender, upload tender and bidder documents, extract requirements, map evidence, perform compliance evaluation, review risks, and record decisions.
+
+Both models maintain isolated state so that the demonstration scenario remains unaffected by manual analysis.
+
+---
+
+## Technology Stack
+
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Lucide React**
+- **Recharts**
+- **Framer Motion**
+- **Local deterministic analysis engine**
+- **Frontend service architecture designed for future FastAPI integration**
+
+The current prototype is frontend-based and uses deterministic/simulated verification data for demonstration purposes.
+
+---
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── EvidenceDrawer.tsx
+│   ├── Login.tsx
+│   ├── Shell.tsx
+│   └── ui.tsx
+│
+├── data/
+│   └── demo.ts
+│
+├── pages/
+│   ├── Audit.tsx
+│   ├── Dashboard.tsx
+│   ├── Decision.tsx
+│   ├── Matrix.tsx
+│   ├── Radar.tsx
+│   ├── Remediation.tsx
+│   ├── Report.tsx
+│   ├── Review.tsx
+│   ├── Risk.tsx
+│   ├── Tender.tsx
+│   ├── Verification.tsx
+│   └── Wizard.tsx
+│
+├── services/
+│   └── engine.ts
+│
+├── state/
+│   └── DemoContext.tsx
+│
+├── App.tsx
+├── index.css
+└── main.tsx
 
 ## The 3–5 minute judge flow
 
